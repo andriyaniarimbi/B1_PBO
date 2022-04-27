@@ -1,4 +1,3 @@
-
 package Posttest1;
 
 import java.util.ArrayList;
@@ -12,29 +11,20 @@ public class DATAKOS {
         kosan = new ArrayList<>();
         
     }
-    
+
     void dataKos(String NK, 
                  String ALM, 
                  String PML,
                  int KK, 
                  int HRG){
-        kosan.add(new KOS(NK,
-                          ALM,
-                          PML,
-                          KK,
-                          HRG));
+        kosan.add(new KOS(NK,ALM,PML,KK,HRG));
     }
     
     void MenghapusData(String idd){
         kosan.removeIf(item -> item.NamaKos.equals(idd));
     }
     
-    void editData(String angka,
-                  String NK,
-                  String ALM,
-                  String PML,
-                  int KK, 
-                  int HRG){
+    void editData(String angka, String NK, String ALM, String PML, int KK, int HRG){
         int cek = -1;
         for(int i=0; i<kosan.size(); i++){
             if(kosan.get(i).NamaKos.equals(angka) ){

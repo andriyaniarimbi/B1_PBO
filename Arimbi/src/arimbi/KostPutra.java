@@ -1,11 +1,10 @@
 package Posttest4;
 
-import Posttest3.*;
 
-public class KostPutri extends KOS {
+public class KostPutra extends DataKost {
     int diskonRamadhan;
 
-    public KostPutri(String NamaKos, String Alamat, String Pemilik,int Kamar_Kosong, int Harga) {
+    public KostPutra(String NamaKos, String Alamat, String Pemilik,int Kamar_Kosong, int Harga) {
         super(NamaKos, Alamat, Pemilik, Kamar_Kosong, Harga);
         this.diskonRamadhan = 10;
     }

@@ -1,7 +1,6 @@
 package Posttest4;
 
-
-public class KostPutra extends DataKost {
+public class KostPutra extends KOS {
     int diskonRamadhan;
 
     public KostPutra(String NamaKos, String Alamat, String Pemilik,int Kamar_Kosong, int Harga) {

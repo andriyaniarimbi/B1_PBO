@@ -1,6 +1,5 @@
-package Posttest4;
+package Posttest3;
 
-import Posttest3.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,7 +27,26 @@ public class Main {
         kosan.add(new KOS(NamaKos, Alamat, Pemilik, Kamar_Kosong, Harga));
     }
     
-  
+    static void ClearScreen() {
+        try {
+            final String os = System.getProperty("os.name");
+            if (os.contains("Windows")) {
+                // clear screen untuk windows
+                new ProcessBuilder("cmd", "/c", "cls")
+                        .inheritIO()
+                        .start()
+                        .waitFor();
+            } else {
+                // clear screen untuk Linux, Unix, Mac
+                Runtime.getRuntime().exec("clear");
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+        } catch (final IOException | InterruptedException e) {
+            System.out.println("Error karena: " + e.getMessage());
+        }
+    }
+    
     void MenghapusData(String idd){
         kosan.removeIf(item -> item.getNamaKos().equals(idd));
     }

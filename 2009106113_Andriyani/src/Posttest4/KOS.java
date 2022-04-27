@@ -1,4 +1,6 @@
-package Posttest3;
+package Posttest4;
+
+import Posttest3.*;
 
 class KOS {
     String NamaKos;
